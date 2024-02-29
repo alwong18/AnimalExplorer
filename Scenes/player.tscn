@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b5doxaq34uvii"]
+[gd_scene load_steps=11 format=3 uid="uid://b5doxaq34uvii"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_u82nx"]
 [ext_resource type="Texture2D" uid="uid://cd2oa1cqn30xj" path="res://player.png" id="2_d22rd"]
@@ -6,6 +6,10 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_kgx7t"]
 atlas = ExtResource("2_d22rd")
 region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmv6k"]
+atlas = ExtResource("2_d22rd")
+region = Rect2(144, 0, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6rwll"]
 atlas = ExtResource("2_d22rd")
@@ -23,20 +27,25 @@ region = Rect2(72, 0, 24, 20)
 atlas = ExtResource("2_d22rd")
 region = Rect2(96, 0, 24, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jn24n"]
-atlas = ExtResource("2_d22rd")
-region = Rect2(120, 0, 24, 20)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rmv6k"]
-atlas = ExtResource("2_d22rd")
-region = Rect2(144, 0, 24, 20)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_qxant"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kgx7t")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
 }, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmv6k")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6rwll")
 }, {
@@ -50,13 +59,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_vqm1x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jn24n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rmv6k")
+"texture": SubResource("AtlasTexture_vqm1x")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Walk",
 "speed": 5.0
 }]
 
@@ -69,6 +75,15 @@ script = ExtResource("1_u82nx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qxant")
+animation = &"Walk"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_qxant")
+animation = &"Walk"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D/AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_qxant")
+animation = &"Jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
