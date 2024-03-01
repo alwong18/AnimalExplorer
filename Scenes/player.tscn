@@ -73,6 +73,11 @@ height = 18.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_u82nx")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2.08165e-12, -32)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qxant")
 animation = &"Walk"
