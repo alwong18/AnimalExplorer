@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="AnimalExplorer"
-run/main_scene="res://Scenes/World.tscn"
+run/main_scene="res://Scenes/start_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 
