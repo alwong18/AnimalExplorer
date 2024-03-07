@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://djtsc0xpspkd8"]
+[gd_scene load_steps=3 format=3 uid="uid://djtsc0xpspkd8"]
 
 [ext_resource type="PackedScene" uid="uid://b5doxaq34uvii" path="res://Scenes/player.tscn" id="1_e5v70"]
+[ext_resource type="PackedScene" uid="uid://7p0cc1nwkoec" path="res://Scenes/level_completed.tscn" id="2_dt5c7"]
 
 [node name="World" type="Node"]
 
@@ -14,3 +15,9 @@ polygon = PackedVector2Array(-11, 18, 164, 15, 163, 82, -128, 90, -129, 21)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 polygon = PackedVector2Array(-129, 22, 164, 15, 164, 81, -128, 91)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="LevelCompleted" parent="Node" instance=ExtResource("2_dt5c7")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
