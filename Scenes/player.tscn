@@ -71,6 +71,8 @@ radius = 5.0
 height = 18.0
 
 [node name="Player" type="CharacterBody2D"]
+floor_constant_speed = true
+floor_snap_length = 2.0
 script = ExtResource("1_u82nx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -91,5 +93,8 @@ sprite_frames = SubResource("SpriteFrames_qxant")
 animation = &"Jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_kfdat")
+
+[node name="CoyoteJumpTimer" type="Timer" parent="."]
+wait_time = 0.02
