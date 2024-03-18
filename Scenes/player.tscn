@@ -1,74 +1,84 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5doxaq34uvii"]
+[gd_scene load_steps=13 format=3 uid="uid://b5doxaq34uvii"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_u82nx"]
 [ext_resource type="Texture2D" uid="uid://cd2oa1cqn30xj" path="res://player.png" id="2_d22rd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kgx7t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s3r1"]
 atlas = ExtResource("2_d22rd")
 region = Rect2(0, 0, 24, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rmv6k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ls433"]
 atlas = ExtResource("2_d22rd")
 region = Rect2(144, 0, 24, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6rwll"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2x8w"]
 atlas = ExtResource("2_d22rd")
 region = Rect2(24, 0, 24, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b78va"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtd77"]
 atlas = ExtResource("2_d22rd")
 region = Rect2(48, 0, 24, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rkw7d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4sbr"]
 atlas = ExtResource("2_d22rd")
 region = Rect2(72, 0, 24, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vqm1x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0yra"]
 atlas = ExtResource("2_d22rd")
 region = Rect2(96, 0, 24, 20)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qxant"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw8a2"]
+atlas = ExtResource("2_d22rd")
+region = Rect2(120, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j45n"]
+atlas = ExtResource("2_d22rd")
+region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfnh3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kgx7t")
+"texture": SubResource("AtlasTexture_7s3r1")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rmv6k")
+"texture": SubResource("AtlasTexture_ls433")
 }],
 "loop": true,
-"name": &"Jump",
+"name": &"jump",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6rwll")
+"texture": SubResource("AtlasTexture_n2x8w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b78va")
+"texture": SubResource("AtlasTexture_mtd77")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rkw7d")
+"texture": SubResource("AtlasTexture_a4sbr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vqm1x")
+"texture": SubResource("AtlasTexture_a0yra")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vqm1x")
+"texture": SubResource("AtlasTexture_gw8a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j45n")
 }],
 "loop": true,
-"name": &"Walk",
-"speed": 5.0
+"name": &"run",
+"speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kfdat"]
-radius = 5.0
-height = 18.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8qm"]
+size = Vector2(9, 16)
 
 [node name="Player" type="CharacterBody2D"]
 floor_constant_speed = true
@@ -81,20 +91,13 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_qxant")
-animation = &"Walk"
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
-sprite_frames = SubResource("SpriteFrames_qxant")
-animation = &"Walk"
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D/AnimatedSprite2D"]
-sprite_frames = SubResource("SpriteFrames_qxant")
-animation = &"Jump"
+sprite_frames = SubResource("SpriteFrames_yfnh3")
+animation = &"idle"
+frame_progress = 0.277577
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_kfdat")
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_aa8qm")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
 wait_time = 0.02
