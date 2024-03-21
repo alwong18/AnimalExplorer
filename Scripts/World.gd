@@ -10,4 +10,4 @@ func _ready():
 	
 func show_level_completed():
 	level_completed.show()
-#	get_tree().paused = true
+	get_tree().paused = true
