@@ -1,12 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2mdhd4vpxsqi"]
 
 [ext_resource type="PackedScene" uid="uid://b5doxaq34uvii" path="res://Scenes/player.tscn" id="1_e5v70"]
-[ext_resource type="PackedScene" uid="uid://dm3yji7n1xmhb" path="res://Scenes/level_completed.tscn" id="2_rfa01"]
+[ext_resource type="PackedScene" path="res://Scenes/level_completed.tscn" id="2_rfa01"]
 
 [node name="World" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_e5v70")]
-up_direction = Vector2(2.94434e-12, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
