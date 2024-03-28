@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 
-@export var movement_data : PlayerMovementData
+@export var movement_data = PlayerMovementData
 
 var air_jump = false
 var just_wall_jumped = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://depgw0hnt5dd"]
+[gd_scene load_steps=7 format=3 uid="uid://b3ryt25d8sqst"]
 
 [ext_resource type="Texture2D" uid="uid://dg7rvgt68qv7d" path="res://frog.png" id="1_bpeey"]
 [ext_resource type="Script" path="res://Scripts/walking_enemy.gd" id="1_wynd0"]
