@@ -1,13 +1,21 @@
 [gd_scene load_steps=3 format=3 uid="uid://k5rl6ostil4q"]
 
 [ext_resource type="PackedScene" uid="uid://b5doxaq34uvii" path="res://Scenes/player.tscn" id="1_e5v70"]
-[ext_resource type="PackedScene" path="res://Scenes/level_completed.tscn" id="2_rfa01"]
+[ext_resource type="PackedScene" uid="uid://depgw0hnt5dd" path="res://Scenes/walking_enemy.tscn" id="2_excf4"]
 
 [node name="World" type="Node"]
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(118, 148)
+polygon = PackedVector2Array(-11, 18, 164, 15, 163, 82, -128, 90, -129, 21)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
+polygon = PackedVector2Array(-129, 17, 164, 15, 164, 81, -128, 91)
+
 [node name="Player" parent="." instance=ExtResource("1_e5v70")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("2_rfa01")]
-visible = false
+[node name="WalkingEnemy" parent="." instance=ExtResource("2_excf4")]
+position = Vector2(141, 169)
+scale = Vector2(0.2, 0.2)

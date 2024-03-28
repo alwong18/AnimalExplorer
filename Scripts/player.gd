@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 @export var movement_data : PlayerMovementData
 
 var air_jump = false
@@ -19,13 +21,14 @@ func _physics_process(delta):
 	apply_friction(input_axis, delta)
 	apply_air_resistance(input_axis, delta)
 	update_animations(input_axis)
+	
 	var was_on_floor = is_on_floor()
 	move_and_slide()
 	var just_left_ledge = was_on_floor and not is_on_floor() and velocity.y >= 0
 	if just_left_ledge:
 		coyote_jump_timer.start()
 	just_wall_jumped = false
-
+	
 func apply_gravity(delta):
 	if not is_on_floor():
 		velocity.y += gravity * movement_data.gravity_scale * delta
