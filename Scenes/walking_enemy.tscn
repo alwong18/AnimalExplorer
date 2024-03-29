@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3ryt25d8sqst"]
+[gd_scene load_steps=7 format=3 uid="uid://dxyvgsaakhwxi"]
 
-[ext_resource type="Texture2D" uid="uid://dg7rvgt68qv7d" path="res://frog.png" id="1_bpeey"]
+[ext_resource type="Texture2D" path="res://frog.png" id="1_bpeey"]
 [ext_resource type="Script" path="res://Scripts/walking_enemy.gd" id="1_wynd0"]
-[ext_resource type="PackedScene" uid="uid://b1ev4cjjft18t" path="res://Scenes/hitbox.tscn" id="3_6aoed"]
+[ext_resource type="PackedScene" path="res://Scenes/hitbox.tscn" id="3_6aoed"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xilor"]
 atlas = ExtResource("1_bpeey")
@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_514xm"]
-size = Vector2(79, 59.5)
+size = Vector2(79, 58)
 
 [node name="WalkingEnemy" type="CharacterBody2D"]
 light_mask = 2
@@ -34,7 +34,7 @@ animation = &"Walking"
 speed_scale = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, -49.25)
+position = Vector2(-2.5, -50)
 shape = SubResource("RectangleShape2D_514xm")
 
 [node name="LedgeCheckR" type="RayCast2D" parent="."]
