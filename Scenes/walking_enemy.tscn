@@ -1,48 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxyvgsaakhwxi"]
+[gd_scene load_steps=5 format=3 uid="uid://dxyvgsaakhwxi"]
 
-[ext_resource type="Texture2D" path="res://frog.png" id="1_bpeey"]
 [ext_resource type="Script" path="res://Scripts/walking_enemy.gd" id="1_wynd0"]
-[ext_resource type="PackedScene" path="res://Scenes/hitbox.tscn" id="3_6aoed"]
+[ext_resource type="Texture2D" uid="uid://bcep1o1pumeua" path="res://enemy.png" id="3_4ty2m"]
+[ext_resource type="PackedScene" uid="uid://b1ev4cjjft18t" path="res://Scenes/hitbox.tscn" id="3_6aoed"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xilor"]
-atlas = ExtResource("1_bpeey")
-region = Rect2(0, 0, 200, 200)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7r3wp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xilor")
-}],
-"loop": true,
-"name": &"Walking",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_514xm"]
-size = Vector2(79, 58)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ewu2p"]
+radius = 51.0392
 
 [node name="WalkingEnemy" type="CharacterBody2D"]
 light_mask = 2
 script = ExtResource("1_wynd0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-8, -75)
-scale = Vector2(0.66, 0.645)
-sprite_frames = SubResource("SpriteFrames_7r3wp")
-animation = &"Walking"
-speed_scale = 3.0
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, -50)
-shape = SubResource("RectangleShape2D_514xm")
+position = Vector2(-1, -66)
+shape = SubResource("CircleShape2D_ewu2p")
 
 [node name="LedgeCheckR" type="RayCast2D" parent="."]
-position = Vector2(51, -31)
+position = Vector2(23, -34)
 target_position = Vector2(0, 22)
 
 [node name="LedgeCheckL" type="RayCast2D" parent="."]
-position = Vector2(-50, -29)
+position = Vector2(-21, -32)
 target_position = Vector2(0, 20)
 
 [node name="Hitbox" parent="." instance=ExtResource("3_6aoed")]
@@ -50,4 +28,9 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
-polygon = PackedVector2Array(-53, -21, -59, -42, -58, -52, -52, -62, -37, -62, -37, -67, -42, -67, -42, -92, -37, -103, -31, -108, -16, -108, -16, -99, 10, -99, 10, -108, 25, -108, 32, -103, 36, -93, 36, -70, 36, -70, 47, -62, 52, -53, 52, -41, 45, -34, 47, -33, 47, -21)
+polygon = PackedVector2Array(-21, -20, -21, -53, -39, -51, -43, -57, -49, -66, -53, -68, -52, -78, -42, -92, -32, -97, -26, -102, -16, -109, -12, -115, 10, -115, 16, -110, 23, -102, 28, -98, 33, -94, 37, -89, 42, -84, 43, -79, 45, -75, 46, -64, 43, -57, 25, -57, 24, -26, 20, -21)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -66)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_4ty2m")
