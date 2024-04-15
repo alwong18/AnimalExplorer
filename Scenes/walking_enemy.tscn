@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=3 uid="uid://dxyvgsaakhwxi"]
 
 [ext_resource type="Script" path="res://Scripts/walking_enemy.gd" id="1_wynd0"]
@@ -6,18 +7,51 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqwb8"]
 size = Vector2(55, 82)
+=======
+[gd_scene load_steps=7 format=3 uid="uid://dxyvgsaakhwxi"]
+
+[ext_resource type="Texture2D" path="res://frog.png" id="1_bpeey"]
+[ext_resource type="Script" path="res://Scripts/walking_enemy.gd" id="1_wynd0"]
+[ext_resource type="PackedScene" path="res://Scenes/hitbox.tscn" id="3_6aoed"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xilor"]
+atlas = ExtResource("1_bpeey")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7r3wp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xilor")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_514xm"]
+size = Vector2(79, 58)
+>>>>>>> Stashed changes
 
 [node name="WalkingEnemy" type="CharacterBody2D"]
 light_mask = 2
 script = ExtResource("1_wynd0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< Updated upstream
 position = Vector2(2.5, -63)
 shape = SubResource("RectangleShape2D_dqwb8")
 
 [node name="LedgeCheckR" type="RayCast2D" parent="."]
 visible = false
 position = Vector2(23, -34)
+=======
+position = Vector2(-2.5, -50)
+shape = SubResource("RectangleShape2D_514xm")
+
+[node name="LedgeCheckR" type="RayCast2D" parent="."]
+position = Vector2(47, -30)
+>>>>>>> Stashed changes
 target_position = Vector2(0, 22)
 
 [node name="LedgeCheckL" type="RayCast2D" parent="."]
