@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://7040oaj7p6kp"]
+[gd_scene load_steps=7 format=3 uid="uid://c5iq2wtyen0rd"]
 
 [ext_resource type="PackedScene" uid="uid://k5rl6ostil4q" path="res://Scenes/World.tscn" id="1_7hj86"]
 [ext_resource type="PackedScene" uid="uid://cw6ygm8ak2lp4" path="res://Scenes/level_1_tile_map.tscn" id="2_x3bm2"]
-[ext_resource type="PackedScene" uid="uid://cll5bggptsttw" path="res://berries.tscn" id="3_pbbn2"]
+[ext_resource type="PackedScene" uid="uid://sxvpbxfepvh5" path="res://berries.tscn" id="3_pbbn2"]
 [ext_resource type="PackedScene" uid="uid://ih5icn2d6tff" path="res://key_1.tscn" id="4_sfn3w"]
+[ext_resource type="PackedScene" uid="uid://cgtfxljvg2lt5" path="res://apple.tscn" id="5_jg8ru"]
+[ext_resource type="PackedScene" uid="uid://b5adjukue6psi" path="res://grape.tscn" id="6_vc1c2"]
 
 [node name="LevelOne" instance=ExtResource("1_7hj86")]
 
@@ -18,3 +20,10 @@ position = Vector2(78, 92)
 
 [node name="Key1" parent="." index="4" instance=ExtResource("4_sfn3w")]
 position = Vector2(50, 57)
+
+[node name="Apple" parent="." index="5" instance=ExtResource("5_jg8ru")]
+position = Vector2(102, 91)
+
+[node name="Grape" parent="." index="6" instance=ExtResource("6_vc1c2")]
+position = Vector2(230, 124)
+scale = Vector2(0.5, 0.5)
