@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5adjukue6psi"]
+[gd_scene load_steps=4 format=3 uid="uid://bhg1jc4xixyfy"]
 
 [ext_resource type="Script" path="res://Scripts/Grape.gd" id="1_2q6av"]
-[ext_resource type="Texture2D" uid="uid://bbs3yrhk3um0m" path="res://grape.png" id="2_2kiay"]
+[ext_resource type="Texture2D" path="res://grape.png" id="2_2kiay"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gv7hd"]
 radius = 9.0
