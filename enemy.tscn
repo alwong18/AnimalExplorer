@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://blw60pn4whifh"]
+
+[ext_resource type="Script" path="res://Enemy.gd" id="1_88rht"]
+[ext_resource type="Texture2D" uid="uid://bcep1o1pumeua" path="res://enemy.png" id="2_lypur"]
+[ext_resource type="PackedScene" uid="uid://bt41ycdwihgpp" path="res://hitbox.tscn" id="3_13hrr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w66ib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lypur")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiq3a"]
+size = Vector2(50, 90)
+
+[node name="Enemy" type="CharacterBody2D"]
+light_mask = 2
+position = Vector2(2.08165e-12, -10)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_88rht")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -3.8147e-06)
+sprite_frames = SubResource("SpriteFrames_w66ib")
+animation = &"walking"
+speed_scale = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.98023e-07, 4.99999)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_oiq3a")
+
+[node name="LedgeCheckL" type="RayCast2D" parent="."]
+position = Vector2(-25, 27)
+target_position = Vector2(-3.8147e-06, 30)
+
+[node name="LedgeCheckR" type="RayCast2D" parent="."]
+position = Vector2(25, 20)
+target_position = Vector2(0, 35)
+
+[node name="Hitbox" parent="." instance=ExtResource("3_13hrr")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+position = Vector2(9.53674e-07, 1.00974e-28)
+polygon = PackedVector2Array(-14, -56, 10, -56, 10, -50, 16, -50, 50, -14, 50, 6, 46, 10, 26, 10, 26, 46, 20, 50, -20, 50, -26, 46, -26, 16, -46, 16, -62, -2, -62, -14)
