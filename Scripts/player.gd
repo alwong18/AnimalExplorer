@@ -48,12 +48,12 @@ func handle_jump():
 		if Input.is_action_just_pressed("move_up"):
 			velocity.y = movement_data.jump_velocity
 	elif not is_on_floor():
-			if Input.is_action_just_released("move_up") and velocity.y < movement_data.jump_velocity / 2:
-				velocity.y = movement_data.jump_velocity / 2
-				
-			if Input.is_action_just_pressed("move_up") and air_jump and not just_wall_jumped:
-				velocity.y = movement_data.jump_velocity * 0.8
-				air_jump = false
+		if Input.is_action_just_released("move_up") and velocity.y < movement_data.jump_velocity / 2:
+			velocity.y = movement_data.jump_velocity / 2
+	
+		if Input.is_action_just_pressed("move_up") and air_jump and not just_wall_jumped:
+			velocity.y = movement_data.jump_velocity * 0.8
+			air_jump = false
 
 func handle_acceleration(input_axis, delta):
 	if not is_on_floor(): return
