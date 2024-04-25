@@ -15,8 +15,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_514xm"]
-size = Vector2(72, 60)
+[sub_resource type="CircleShape2D" id="CircleShape2D_hpl36"]
+radius = 36.0
 
 [node name="WalkingEnemy" type="CharacterBody2D"]
 light_mask = 2
@@ -31,8 +31,8 @@ animation = &"Walking"
 speed_scale = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-11, -49)
-shape = SubResource("RectangleShape2D_514xm")
+position = Vector2(-10, -53)
+shape = SubResource("CircleShape2D_hpl36")
 
 [node name="LedgeCheckR" type="RayCast2D" parent="."]
 position = Vector2(8, -31)
