@@ -7,7 +7,7 @@
 size = Vector2(28, 31)
 
 [node name="crown" type="Area2D"]
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_qf1b0")
 

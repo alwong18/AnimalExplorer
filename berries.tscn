@@ -7,7 +7,7 @@
 
 [node name="Berries" type="Area2D" groups=["Berries"]]
 scale = Vector2(0.5, 0.5)
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_ey1cp")
 
