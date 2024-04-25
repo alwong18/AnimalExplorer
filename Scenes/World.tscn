@@ -1,7 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://k5rl6ostil4q"]
+[gd_scene load_steps=3 format=3 uid="uid://k5rl6ostil4q"]
 
 [ext_resource type="PackedScene" uid="uid://b5doxaq34uvii" path="res://Scenes/player.tscn" id="1_e5v70"]
+[ext_resource type="PackedScene" uid="uid://lcq5ylcf8lp5" path="res://Scenes/walking_enemy.tscn" id="2_excf4"]
 
 [node name="World" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_e5v70")]
+
+[node name="WalkingEnemy" parent="." instance=ExtResource("2_excf4")]
+position = Vector2(141, 169)
+scale = Vector2(0.2, 0.2)
