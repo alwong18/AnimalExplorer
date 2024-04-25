@@ -1,18 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4ke38wno5hnb"]
+[gd_scene load_steps=6 format=3 uid="uid://lcq5ylcf8lp5"]
 
-[ext_resource type="Texture2D" path="res://frog.png" id="1_bpeey"]
 [ext_resource type="Script" path="res://Scripts/walking_enemy.gd" id="1_wynd0"]
+[ext_resource type="Texture2D" path="res://enemy.png" id="2_2r3kh"]
 [ext_resource type="PackedScene" uid="uid://dedq5n4o547bl" path="res://Scenes/hitbox.tscn" id="3_6aoed"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xilor"]
-atlas = ExtResource("1_bpeey")
-region = Rect2(0, 0, 200, 200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7r3wp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xilor")
+"texture": ExtResource("2_2r3kh")
 }],
 "loop": true,
 "name": &"Walking",
@@ -20,7 +16,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_514xm"]
-size = Vector2(79, 58)
+size = Vector2(72, 60)
 
 [node name="WalkingEnemy" type="CharacterBody2D"]
 light_mask = 2

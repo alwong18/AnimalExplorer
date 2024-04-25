@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://buxn2hx1nd05s"]
+[gd_scene load_steps=4 format=3 uid="uid://cgtfxljvg2lt5"]
 
 [ext_resource type="Script" path="res://Scripts/Apple.gd" id="1_4v7nn"]
 [ext_resource type="Texture2D" uid="uid://clyxy2ikw6gp6" path="res://apple.png" id="2_2q1er"]
