@@ -7,10 +7,24 @@ class_name Player
 var air_jump = false
 var just_wall_jumped = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var label = Label
+var time = Timer
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer = $CoyoteJumpTimer
 
+func _ready():
+	label = $Camera2D/Label
+	time = $Camera2D/Time
+	
+
+func _proccess(delta):
+	update_label_text()
+
+func update_label_text():
+	label.text = str(ceil(time.time_left))
+	
+	
 func _physics_process(delta):
 	apply_gravity(delta)
 	handle_wall_jump()
