@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://d6u4p8bf0vfe"]
+[gd_scene load_steps=12 format=3 uid="uid://d6u4p8bf0vfe"]
 
 [ext_resource type="PackedScene" uid="uid://k5rl6ostil4q" path="res://Scenes/World.tscn" id="1_7hj86"]
 [ext_resource type="PackedScene" uid="uid://8oocy0wrsac1" path="res://Scenes/level_1_tile_map.tscn" id="2_x3bm2"]
-[ext_resource type="PackedScene" uid="uid://sxvpbxfepvh5" path="res://berries.tscn" id="3_pbbn2"]
+[ext_resource type="PackedScene" path="res://berries.tscn" id="3_pbbn2"]
 [ext_resource type="PackedScene" uid="uid://lcq5ylcf8lp5" path="res://Scenes/walking_enemy.tscn" id="3_sqda2"]
-[ext_resource type="PackedScene" uid="uid://ih5icn2d6tff" path="res://key_1.tscn" id="4_sfn3w"]
-[ext_resource type="PackedScene" uid="uid://cgtfxljvg2lt5" path="res://apple.tscn" id="5_jg8ru"]
-[ext_resource type="PackedScene" uid="uid://b5adjukue6psi" path="res://grape.tscn" id="6_vc1c2"]
-[ext_resource type="PackedScene" uid="uid://b2hgiy2wj8ro3" path="res://crown.tscn" id="7_r4mpk"]
-[ext_resource type="PackedScene" uid="uid://brrge7wiwsgsj" path="res://trophy.tscn" id="9_ske5n"]
-[ext_resource type="Texture2D" uid="uid://bgp6tnyb8ysek" path="res://green forest.png" id="10_lyht3"]
+[ext_resource type="PackedScene" path="res://key_1.tscn" id="4_sfn3w"]
+[ext_resource type="PackedScene" path="res://apple.tscn" id="5_jg8ru"]
+[ext_resource type="PackedScene" path="res://grape.tscn" id="6_vc1c2"]
+[ext_resource type="PackedScene" path="res://crown.tscn" id="7_r4mpk"]
+[ext_resource type="PackedScene" path="res://trophy.tscn" id="9_ske5n"]
+[ext_resource type="Texture2D" path="res://green forest.png" id="10_lyht3"]
+[ext_resource type="PackedScene" uid="uid://c76gf56x1eg1v" path="res://portal.tscn" id="11_p2pew"]
 
 [node name="LevelOne" instance=ExtResource("1_7hj86")]
 
@@ -50,5 +51,5 @@ motion_mirroring = Vector2(100, 2.08165e-12)
 position = Vector2(100, 80)
 texture = ExtResource("10_lyht3")
 
-[node name="Portal" parent="." index="11"]
-position = Vector2(109, -70)
+[node name="Portal" parent="." index="10" instance=ExtResource("11_p2pew")]
+position = Vector2(128, -48)
