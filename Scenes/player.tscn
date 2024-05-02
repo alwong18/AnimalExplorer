@@ -116,6 +116,7 @@ script = ExtResource("3_q6wyx")
 wait_time = 60.0
 
 [node name="Label" type="Label" parent="Timer"]
+layout_mode = 0
 offset_left = -18.0
 offset_top = -34.0
 offset_right = 22.0

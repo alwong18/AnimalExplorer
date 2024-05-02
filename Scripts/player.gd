@@ -56,18 +56,23 @@ func handle_wall_jump():
 		just_wall_jumped = true
 	
 func handle_jump():
-	if is_on_floor(): air_jump = true
+	if is_on_floor():
+		air_jump = true
 	
-	if is_on_floor() or coyote_jump_timer.time_left > 0.0:
+	if is_on_floor() or (not coyote_jump_timer.is_stopped() && coyote_jump_timer.time_left > 0.0):
 		if Input.is_action_just_pressed("move_up"):
 			velocity.y = movement_data.jump_velocity
-		elif not is_on_floor():
-			if Input.is_action_just_released("move_up") and velocity.y < movement_data.jump_velocity / 2:
-				velocity.y = movement_data.jump_velocity / 2
-				
-			if Input.is_action_just_pressed("move_up") and air_jump and not just_wall_jumped:
-				velocity.y = movement_data.jump_velocity * 0.8
-				air_jump = false
+			coyote_jump_timer.stop()
+			print("jump")
+	elif not is_on_floor():
+		if Input.is_action_just_released("move_up") and velocity.y < movement_data.jump_velocity / 2:
+			velocity.y = movement_data.jump_velocity / 2
+			print("velocity check jump")
+			
+		if Input.is_action_just_pressed("move_up") and air_jump and not just_wall_jumped:
+			velocity.y = movement_data.jump_velocity * 0.8
+			air_jump = false
+			print("double jump -- air_jump is false")
 
 func handle_acceleration(input_axis, delta):
 	if not is_on_floor(): return
