@@ -40,6 +40,7 @@ position = Vector2(267, 118)
 position = Vector2(223, 51)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="9"]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 motion_scale = Vector2(0.1, 1)
@@ -48,3 +49,6 @@ motion_mirroring = Vector2(100, 2.08165e-12)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
 position = Vector2(100, 80)
 texture = ExtResource("10_lyht3")
+
+[node name="Portal" parent="." index="11"]
+position = Vector2(109, -70)

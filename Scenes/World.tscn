@@ -1,7 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://k5rl6ostil4q"]
+[gd_scene load_steps=4 format=3 uid="uid://k5rl6ostil4q"]
 
 [ext_resource type="PackedScene" uid="uid://b5doxaq34uvii" path="res://Scenes/player.tscn" id="1_e5v70"]
+[ext_resource type="PackedScene" uid="uid://bqb757nw57rpr" path="res://Scenes/level_completed.tscn" id="2_ib3bo"]
+[ext_resource type="PackedScene" uid="uid://bx2mvh4vgsr88" path="res://portal.tscn" id="3_ad12d"]
 
 [node name="World" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_e5v70")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("2_ib3bo")]
+visible = false
+
+[node name="Portal" parent="." instance=ExtResource("3_ad12d")]
+position = Vector2(67, 2)
+scale = Vector2(2.5, 2.5)
