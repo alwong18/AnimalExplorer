@@ -14,4 +14,4 @@ func _on_body_entered(body):
 	if body is Player:
 		print("entered portal")
 		Events.level_completed.emit()
-		get_tree().change_scene_to_file("res://Scenes/level_two.tscn")
+		get_tree().change_scene_to_packed(next_level)
