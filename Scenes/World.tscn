@@ -1,10 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://k5rl6ostil4q"]
+[gd_scene load_steps=5 format=3 uid="uid://k5rl6ostil4q"]
 
 [ext_resource type="PackedScene" uid="uid://b5doxaq34uvii" path="res://Scenes/player.tscn" id="1_e5v70"]
-[ext_resource type="PackedScene" uid="uid://d02181wo8tv0s" path="res://Scenes/portal.tscn" id="3_uddul"]
+[ext_resource type="Script" path="res://Scenes/World.gd" id="1_tv3gm"]
+[ext_resource type="FontFile" uid="uid://bpawmfvndvdvu" path="res://Super Foods.ttf" id="3_iv0rb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8mmjr"]
+font = ExtResource("3_iv0rb")
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="World" type="Node"]
+script = ExtResource("1_tv3gm")
 
 [node name="Player" parent="." instance=ExtResource("1_e5v70")]
 
-[node name="Portal" parent="." instance=ExtResource("3_uddul")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelTimeLabel" type="Label" parent="CanvasLayer"]
+offset_top = 3.0
+offset_right = 319.0
+offset_bottom = 26.0
+label_settings = SubResource("LabelSettings_8mmjr")
+horizontal_alignment = 1
+vertical_alignment = 1
