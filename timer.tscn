@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu2gtcgh0gqn3"]
+
+[ext_resource type="Script" path="res://Timer.gd" id="1_nloy1"]
+[ext_resource type="FontFile" uid="uid://c5vkum18rnjio" path="res://porkys/PORKH___.TTF" id="2_20ywj"]
+
+[node name="Timer" type="Node"]
+script = ExtResource("1_nloy1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1.0
+offset_top = -25.0
+offset_right = 39.0
+offset_bottom = -2.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_20ywj")
+text = "lol"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
