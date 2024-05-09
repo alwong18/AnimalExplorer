@@ -5,5 +5,5 @@
 
 [node name="LevelThree" instance=ExtResource("1_uxuwo")]
 
-[node name="Portal" parent="." index="1"]
+[node name="Portal" parent="." index="2"]
 next_level = ExtResource("2_lnxij")
