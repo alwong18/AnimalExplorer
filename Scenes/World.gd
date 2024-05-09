@@ -20,6 +20,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	level_time= Time.get_ticks_msec() - start_level_msc
-	level_time_label.text = str(level_time/ 1000.0)
+	level_time_label.text = str(level_time/ 100.0)
 
 

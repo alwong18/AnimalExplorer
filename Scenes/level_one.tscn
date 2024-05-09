@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d6u4p8bf0vfe"]
+[gd_scene load_steps=11 format=3 uid="uid://d6u4p8bf0vfe"]
 
 [ext_resource type="PackedScene" uid="uid://k5rl6ostil4q" path="res://Scenes/World.tscn" id="1_7hj86"]
 [ext_resource type="PackedScene" uid="uid://8oocy0wrsac1" path="res://Scenes/level_1_tile_map.tscn" id="2_x3bm2"]
@@ -10,13 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://b2hgiy2wj8ro3" path="res://crown.tscn" id="7_r4mpk"]
 [ext_resource type="PackedScene" uid="uid://brrge7wiwsgsj" path="res://trophy.tscn" id="9_ske5n"]
 [ext_resource type="Texture2D" uid="uid://bgp6tnyb8ysek" path="res://green forest.png" id="10_lyht3"]
-[ext_resource type="PackedScene" uid="uid://bpdbef64mutk8" path="res://Scenes/level_two.tscn" id="11_qj6ek"]
 
 [node name="LevelOne" instance=ExtResource("1_7hj86")]
-
-[node name="Player" parent="." index="0"]
-collision_layer = 2
-collision_mask = 1
 
 [node name="Level1TileMap" parent="." index="1" instance=ExtResource("2_x3bm2")]
 position = Vector2(19, 0)
@@ -53,9 +48,3 @@ motion_mirroring = Vector2(100, 2.08165e-12)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
 position = Vector2(100, 80)
 texture = ExtResource("10_lyht3")
-
-[node name="Portal" parent="." index="10"]
-position = Vector2(33, 2)
-collision_layer = 1
-collision_mask = 2
-next_level = ExtResource("11_qj6ek")
