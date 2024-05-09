@@ -1,12 +1,82 @@
-[gd_scene load_steps=5 format=3 uid="uid://k5rl6ostil4q"]
+[gd_scene load_steps=9 format=3 uid="uid://k5rl6ostil4q"]
 
 [ext_resource type="PackedScene" uid="uid://b5doxaq34uvii" path="res://Scenes/player.tscn" id="1_e5v70"]
 [ext_resource type="Script" path="res://Scenes/World.gd" id="1_tv3gm"]
+[ext_resource type="FontFile" uid="uid://ca30al1di8cyx" path="res://Magic Sound.ttf" id="3_5pd06"]
 [ext_resource type="FontFile" uid="uid://bpawmfvndvdvu" path="res://Super Foods.ttf" id="3_iv0rb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8mmjr"]
 font = ExtResource("3_iv0rb")
 shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_t7s1l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["start in : 3
+
+"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/StartIn:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_a0vqp"]
+resource_name = "countdown"
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 1.2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["start in : 3
+
+", "start in : 2
+
+", "start in : 1
+
+"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/StartIn:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u42lh"]
+_data = {
+"RESET": SubResource("Animation_t7s1l"),
+"countdown": SubResource("Animation_a0vqp")
+}
 
 [node name="World" type="Node"]
 script = ExtResource("1_tv3gm")
@@ -22,3 +92,37 @@ offset_bottom = 26.0
 label_settings = SubResource("LabelSettings_8mmjr")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="StartIn" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.937255, 0.964706, 0.984314, 0.239216)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/StartIn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartInLabel" type="Label" parent="CanvasLayer/StartIn/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(1, 0.721569, 0.92549, 1)
+theme_override_fonts/font = ExtResource("3_5pd06")
+text = "start in : 3
+
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+"": SubResource("AnimationLibrary_u42lh")
+}
+autoplay = "countdown"
