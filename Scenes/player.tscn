@@ -1,10 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://b5doxaq34uvii"]
+[gd_scene load_steps=14 format=3 uid="uid://b5doxaq34uvii"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_u82nx"]
 [ext_resource type="Resource" uid="uid://cd1foekh3anh6" path="res://DefaultMovementData.tres" id="2_51fm6"]
 [ext_resource type="Texture2D" uid="uid://cd2oa1cqn30xj" path="res://player.png" id="2_d22rd"]
-[ext_resource type="FontFile" uid="uid://c5vkum18rnjio" path="res://porkys/PORKH___.TTF" id="3_el0nx"]
-[ext_resource type="Script" path="res://Timer.gd" id="3_q6wyx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7s3r1"]
 atlas = ExtResource("2_d22rd")
@@ -106,26 +104,6 @@ shape = SubResource("RectangleShape2D_aa8qm")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
 wait_time = 0.15
-
-[node name="Timer" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("3_q6wyx")
-
-[node name="Timer" type="Timer" parent="Timer"]
-wait_time = 60.0
-
-[node name="Label" type="Label" parent="Timer"]
-layout_mode = 0
-offset_left = -18.0
-offset_top = -34.0
-offset_right = 22.0
-offset_bottom = -11.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_el0nx")
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
