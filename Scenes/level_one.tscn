@@ -48,3 +48,6 @@ motion_mirroring = Vector2(100, 2.08165e-12)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
 position = Vector2(100, 80)
 texture = ExtResource("10_lyht3")
+
+[node name="Portal" parent="." index="12"]
+position = Vector2(128, -46)
