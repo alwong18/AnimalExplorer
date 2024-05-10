@@ -6,12 +6,10 @@ var start_level_msc = 0.0
 @onready var start_in_label = %StartInLabel
 @onready var animation_player = $AnimationPlayer
 @onready var start_in = %StartIn
-@onready var level_completed = $CanvasLayer/LevelCompleted
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = true
-	await LevelTransition.fade_from_black()
 	animation_player.play("countdown")
 	await animation_player.animation_finished
 	get_tree().paused = false
