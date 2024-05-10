@@ -10,8 +10,8 @@ var start_level_msc = 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = true
-#	animation_player.play("countdown")
-#	await animation_player.animation_finished
+	animation_player.play("countdown")
+	await animation_player.animation_finished
 	get_tree().paused = false
 	start_level_msc = Time.get_ticks_msec()
 	
