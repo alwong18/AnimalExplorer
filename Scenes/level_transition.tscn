@@ -56,7 +56,7 @@ _data = {
 "fade_to_black": SubResource("Animation_0cph5")
 }
 
-[node name="LevelTransition" type="CanvasLayer"]
+[node name="LevelTransition" type="Node"]
 process_mode = 3
 script = ExtResource("1_2e7v2")
 
