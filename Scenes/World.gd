@@ -13,13 +13,12 @@ func _ready():
 	animation_player.play("countdown")
 	await animation_player.animation_finished
 	get_tree().paused = false
+	start_in.visible = false
 	start_level_msc = Time.get_ticks_msec()
 	
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	level_time= Time.get_ticks_msec() - start_level_msc
-	level_time_label.text = str(level_time/ 100.0)
+	level_time_label.text = str(level_time/ 1000.0)
 
 

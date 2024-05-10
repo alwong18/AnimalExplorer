@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dgbkcsmxw0o2g"
-path="res://.godot/imported/CoffeCake.otf-617ffa5994058f4bc80e0b1d099f4cc6.fontdata"
+uid="uid://xowdec88kdac"
+path="res://.godot/imported/gomarice_round_pop.ttf-251a198316b929adea216f881414e688.fontdata"
 
 [deps]
 
-source_file="res://coffecake/CoffeCake.otf"
-dest_files=["res://.godot/imported/CoffeCake.otf-617ffa5994058f4bc80e0b1d099f4cc6.fontdata"]
+source_file="res://gomarice_round_pop.ttf"
+dest_files=["res://.godot/imported/gomarice_round_pop.ttf-251a198316b929adea216f881414e688.fontdata"]
 
 [params]
 

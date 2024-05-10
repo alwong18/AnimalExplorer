@@ -3,13 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://b5doxaq34uvii" path="res://Scenes/player.tscn" id="1_e5v70"]
 [ext_resource type="Script" path="res://Scenes/World.gd" id="1_tv3gm"]
 [ext_resource type="FontFile" uid="uid://ca30al1di8cyx" path="res://Magic Sound.ttf" id="3_5pd06"]
-[ext_resource type="FontFile" uid="uid://c5vkum18rnjio" path="res://porkys/PORKH___.TTF" id="3_mbbkv"]
-[ext_resource type="PackedScene" uid="uid://ce7nouhtqom6x" path="res://portal.tscn" id="3_uddul"]
+[ext_resource type="FontFile" uid="uid://xowdec88kdac" path="res://gomarice_round_pop.ttf" id="3_jup1d"]
+[ext_resource type="PackedScene" path="res://portal.tscn" id="3_uddul"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8mmjr"]
 line_spacing = 4.0
-font = ExtResource("3_mbbkv")
-font_size = 30
+font = ExtResource("3_jup1d")
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 1)
 
@@ -90,9 +89,10 @@ script = ExtResource("1_tv3gm")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="LevelTimeLabel" type="Label" parent="CanvasLayer"]
-offset_top = 3.0
-offset_right = 319.0
-offset_bottom = 26.0
+offset_left = 137.0
+offset_top = 10.0
+offset_right = 138.0
+offset_bottom = 27.0
 label_settings = SubResource("LabelSettings_8mmjr")
 horizontal_alignment = 1
 vertical_alignment = 1
