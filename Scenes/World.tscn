@@ -6,7 +6,10 @@
 [ext_resource type="FontFile" uid="uid://bpawmfvndvdvu" path="res://Super Foods.ttf" id="3_iv0rb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8mmjr"]
+line_spacing = 4.0
 font = ExtResource("3_iv0rb")
+font_size = 20
+outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_t7s1l"]
