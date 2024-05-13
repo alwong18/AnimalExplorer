@@ -9,7 +9,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_8mmjr"]
 line_spacing = 4.0
 font = ExtResource("3_jup1d")
-font_size = 30
+font_size = 17
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 1)
 
