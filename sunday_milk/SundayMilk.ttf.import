@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://du6pbfv861fcd"
-path="res://.godot/imported/PORKYS_.TTF-06532d00f61b0f5a2472294000224e5b.fontdata"
+uid="uid://d2gicfhh6s6il"
+path="res://.godot/imported/SundayMilk.ttf-8a0cb9e32608305bcc14b34fea60f5e9.fontdata"
 
 [deps]
 
-source_file="res://porkys/PORKYS_.TTF"
-dest_files=["res://.godot/imported/PORKYS_.TTF-06532d00f61b0f5a2472294000224e5b.fontdata"]
+source_file="res://sunday_milk/SundayMilk.ttf"
+dest_files=["res://.godot/imported/SundayMilk.ttf-8a0cb9e32608305bcc14b34fea60f5e9.fontdata"]
 
 [params]
 

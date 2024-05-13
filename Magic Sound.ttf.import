@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c5vkum18rnjio"
-path="res://.godot/imported/PORKH___.TTF-67617be079b7bc7ab588bac13bc71b30.fontdata"
+uid="uid://ca30al1di8cyx"
+path="res://.godot/imported/Magic Sound.ttf-24f44d72de01d92c13d582ad71253e21.fontdata"
 
 [deps]
 
-source_file="res://porkys/PORKH___.TTF"
-dest_files=["res://.godot/imported/PORKH___.TTF-67617be079b7bc7ab588bac13bc71b30.fontdata"]
+source_file="res://Magic Sound.ttf"
+dest_files=["res://.godot/imported/Magic Sound.ttf-24f44d72de01d92c13d582ad71253e21.fontdata"]
 
 [params]
 
