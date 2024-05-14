@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b5doxaq34uvii"]
+[gd_scene load_steps=24 format=3 uid="uid://b5doxaq34uvii"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_u82nx"]
 [ext_resource type="Resource" uid="uid://cd1foekh3anh6" path="res://DefaultMovementData.tres" id="2_51fm6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4wwdqu0bisr8" path="res://fox jump sprite sheet.png" id="4_gxpvc"]
 [ext_resource type="Texture2D" uid="uid://d3w0wvxat3pms" path="res://fox walk sprite sheet.png" id="5_71x8c"]
 [ext_resource type="AudioStream" uid="uid://cftrvto48msls" path="res://sunny-valley-155812.mp3" id="6_mpu6q"]
+[ext_resource type="AudioStream" uid="uid://bb44gnvankdb2" path="res://cartoon-jump-6462.mp3" id="7_6ye4q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aoqha"]
 atlas = ExtResource("3_5dorw")
@@ -160,5 +161,11 @@ offset_bottom = 23.0
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="audios" type="Node" parent="."]
+
+[node name="bgm1" type="AudioStreamPlayer2D" parent="audios"]
 stream = ExtResource("6_mpu6q")
+
+[node name="sfx_jump" type="AudioStreamPlayer" parent="audios"]
+stream = ExtResource("7_6ye4q")
+volume_db = 7.0
