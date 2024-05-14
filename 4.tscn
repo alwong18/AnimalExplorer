@@ -4,4 +4,3 @@
 
 [node name="4" type="AudioStreamPlayer"]
 stream = ExtResource("1_4elki")
-volume_db = 10.0
