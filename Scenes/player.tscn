@@ -165,6 +165,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="bgm1" type="AudioStreamPlayer2D" parent="audios"]
 stream = ExtResource("6_mpu6q")
+volume_db = 10.0
 
 [node name="sfx_jump" type="AudioStreamPlayer" parent="audios"]
 stream = ExtResource("7_547cq")

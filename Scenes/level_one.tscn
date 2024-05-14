@@ -113,6 +113,3 @@ texture = ExtResource("10_lyht3")
 position = Vector2(131, -65)
 scale = Vector2(1.5, 1.5)
 next_level = ExtResource("11_jj5ob")
-
-[node name="Key1" parent="." index="27"]
-position = Vector2(90, -134)
