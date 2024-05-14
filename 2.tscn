@@ -5,3 +5,4 @@
 [node name="2" type="AudioStreamPlayer"]
 stream = ExtResource("1_qexlb")
 volume_db = 10.0
+autoplay = true
