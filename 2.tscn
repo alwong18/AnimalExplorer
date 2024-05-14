@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b60epjdc2h37t"]
+
+[ext_resource type="AudioStream" uid="uid://d0bry8j3atwin" path="res://in-the-forest-ambient-acoustic-guitar-instrumental-background-music-for-videos-5718.mp3" id="1_qexlb"]
+
+[node name="2" type="AudioStreamPlayer"]
+stream = ExtResource("1_qexlb")
+volume_db = 10.0

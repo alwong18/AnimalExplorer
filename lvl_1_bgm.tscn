@@ -1,7 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://uqj1o123r6ee"]
+[gd_scene load_steps=2 format=3 uid="uid://758ovr0ci41n"]
 
-[ext_resource type="AudioStream" path="res://in-the-forest-ambient-acoustic-guitar-instrumental-background-music-for-videos-5718.mp3" id="1_mtlgw"]
+[ext_resource type="AudioStream" uid="uid://cftrvto48msls" path="res://sunny-valley-155812.mp3" id="1_r5sgh"]
 
 [node name="lvl1bgm" type="AudioStreamPlayer"]
-stream = ExtResource("1_mtlgw")
+stream = ExtResource("1_r5sgh")
+volume_db = 10.0
 autoplay = true

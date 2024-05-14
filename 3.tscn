@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://u5sn0vsepawk"]
+
+[ext_resource type="AudioStream" uid="uid://cnddp6d2hua5s" path="res://edge-of-darkness-dark-cinematic-film-score-113975.mp3" id="1_p3ple"]
+
+[node name="3" type="AudioStreamPlayer"]
+stream = ExtResource("1_p3ple")
+volume_db = 10.0
+autoplay = true
