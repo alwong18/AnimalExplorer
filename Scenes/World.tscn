@@ -136,3 +136,5 @@ autoplay = "countdown"
 [node name="Portal" parent="." instance=ExtResource("3_uddul")]
 
 [node name="Key1" parent="." instance=ExtResource("6_vkbq2")]
+
+[connection signal="body_entered" from="Key1" to="Portal" method="_on_key_1_body_entered"]
