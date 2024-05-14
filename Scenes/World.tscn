@@ -4,11 +4,12 @@
 [ext_resource type="Script" path="res://Scenes/World.gd" id="1_tv3gm"]
 [ext_resource type="FontFile" uid="uid://ca30al1di8cyx" path="res://Magic Sound.ttf" id="3_5pd06"]
 [ext_resource type="FontFile" uid="uid://xowdec88kdac" path="res://gomarice_round_pop.ttf" id="3_jup1d"]
-[ext_resource type="PackedScene" path="res://portal.tscn" id="3_uddul"]
+[ext_resource type="PackedScene" uid="uid://ce7nouhtqom6x" path="res://portal.tscn" id="3_uddul"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8mmjr"]
 line_spacing = 4.0
 font = ExtResource("3_jup1d")
+font_size = 17
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 1)
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://d6u4p8bf0vfe"]
+[gd_scene load_steps=13 format=3 uid="uid://d6u4p8bf0vfe"]
 
 [ext_resource type="PackedScene" uid="uid://k5rl6ostil4q" path="res://Scenes/World.tscn" id="1_7hj86"]
+[ext_resource type="PackedScene" uid="uid://758ovr0ci41n" path="res://lvl_1_bgm.tscn" id="2_gpddt"]
 [ext_resource type="PackedScene" uid="uid://8oocy0wrsac1" path="res://Scenes/level_1_tile_map.tscn" id="2_x3bm2"]
 [ext_resource type="PackedScene" uid="uid://sxvpbxfepvh5" path="res://berries.tscn" id="3_pbbn2"]
 [ext_resource type="PackedScene" uid="uid://lcq5ylcf8lp5" path="res://Scenes/walking_enemy.tscn" id="3_sqda2"]
@@ -13,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bpdbef64mutk8" path="res://Scenes/level_two.tscn" id="11_jj5ob"]
 
 [node name="LevelOne" instance=ExtResource("1_7hj86")]
+
+[node name="lvl1bgm" parent="Player" index="6" instance=ExtResource("2_gpddt")]
 
 [node name="Level1TileMap" parent="." index="1" instance=ExtResource("2_x3bm2")]
 position = Vector2(19, 0)

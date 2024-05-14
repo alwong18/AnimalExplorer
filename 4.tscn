@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr6qwxeqd684d"]
+
+[ext_resource type="AudioStream" uid="uid://dm47wn3vxf4c8" path="res://dark-secrets-at-the-black-castle-163584.mp3" id="1_4elki"]
+
+[node name="4" type="AudioStreamPlayer"]
+stream = ExtResource("1_4elki")
