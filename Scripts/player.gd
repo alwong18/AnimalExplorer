@@ -9,9 +9,12 @@ var just_wall_jumped = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var label = Label
 var time = Timer
+var FOOTSTEPS = [$audios/sfx_walk]
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer = $CoyoteJumpTimer
+@onready var sfx_jump = $sfx_jump
+@onready var sfx_walk = $sfx_walk
 
 func _ready():
 	label = $Camera2D/Label
@@ -43,6 +46,7 @@ func _physics_process(delta):
 		coyote_jump_timer.start()
 	just_wall_jumped = false
 	
+	
 func apply_gravity(delta):
 	if not is_on_floor():
 		velocity.y += gravity * movement_data.gravity_scale * delta
@@ -68,11 +72,13 @@ func handle_jump():
 		if Input.is_action_just_released("move_up") and velocity.y < movement_data.jump_velocity / 2:
 			velocity.y = movement_data.jump_velocity / 2
 			print("velocity check jump")
+			sfx_jump.play()
 			
 		if Input.is_action_just_pressed("move_up") and air_jump and not just_wall_jumped:
 			velocity.y = movement_data.jump_velocity * 0.8
 			air_jump = false
 			print("double jump -- air_jump is false")
+			
 
 func handle_acceleration(input_axis, delta):
 	if not is_on_floor(): return
@@ -100,3 +106,8 @@ func update_animations(input_axis):
 		animated_sprite_2d.play("idle")
 	if not is_on_floor():
 		animated_sprite_2d.play("jump")
+
+
+
+
+
