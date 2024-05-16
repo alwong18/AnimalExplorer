@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpdbef64mutk8"]
+[gd_scene load_steps=7 format=3 uid="uid://bpdbef64mutk8"]
 
 [ext_resource type="PackedScene" uid="uid://k5rl6ostil4q" path="res://Scenes/World.tscn" id="1_6hlqk"]
 [ext_resource type="PackedScene" uid="uid://bi8y45dup61mv" path="res://Scenes/level_2_tile_map.tscn" id="2_1ib1o"]
 [ext_resource type="Texture2D" uid="uid://bcwlcbq5tgkvx" path="res://sunset forest-export.png" id="3_sagoy"]
 [ext_resource type="PackedScene" uid="uid://jjmqf5wqxvqu" path="res://Scenes/level_three.tscn" id="4_oypf2"]
 [ext_resource type="PackedScene" uid="uid://b60epjdc2h37t" path="res://2.tscn" id="5_2yau3"]
+[ext_resource type="PackedScene" uid="uid://lcq5ylcf8lp5" path="res://Scenes/walking_enemy.tscn" id="6_k4c6k"]
 
 [node name="LevelTwo" instance=ExtResource("1_6hlqk")]
 
@@ -32,4 +33,111 @@ position = Vector2(0, 32)
 next_level = ExtResource("4_oypf2")
 
 [node name="2" parent="." index="6" instance=ExtResource("5_2yau3")]
-autoplay = true
+
+[node name="WalkingEnemy" parent="." index="8" instance=ExtResource("6_k4c6k")]
+position = Vector2(-428, -282)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy16" parent="." index="9" instance=ExtResource("6_k4c6k")]
+position = Vector2(462, -507)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy17" parent="." index="10" instance=ExtResource("6_k4c6k")]
+position = Vector2(-182, -427)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy18" parent="." index="11" instance=ExtResource("6_k4c6k")]
+position = Vector2(-353, -331)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy19" parent="." index="12" instance=ExtResource("6_k4c6k")]
+position = Vector2(-943, -74)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy20" parent="." index="13" instance=ExtResource("6_k4c6k")]
+position = Vector2(-863, -27)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy21" parent="." index="14" instance=ExtResource("6_k4c6k")]
+position = Vector2(-618, -59)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy22" parent="." index="15" instance=ExtResource("6_k4c6k")]
+position = Vector2(-675, -58)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy23" parent="." index="16" instance=ExtResource("6_k4c6k")]
+position = Vector2(-786, -251)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy24" parent="." index="17" instance=ExtResource("6_k4c6k")]
+position = Vector2(-670, -250)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy25" parent="." index="18" instance=ExtResource("6_k4c6k")]
+position = Vector2(-462, -282)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy26" parent="." index="19" instance=ExtResource("6_k4c6k")]
+position = Vector2(-594, -282)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy27" parent="." index="20" instance=ExtResource("6_k4c6k")]
+position = Vector2(-525, -251)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy2" parent="." index="21" instance=ExtResource("6_k4c6k")]
+position = Vector2(-153, 38)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy7" parent="." index="22" instance=ExtResource("6_k4c6k")]
+position = Vector2(423, -155)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy8" parent="." index="23" instance=ExtResource("6_k4c6k")]
+position = Vector2(287, -43)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy9" parent="." index="24" instance=ExtResource("6_k4c6k")]
+position = Vector2(443, -74)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy10" parent="." index="25" instance=ExtResource("6_k4c6k")]
+position = Vector2(427, -43)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy11" parent="." index="26" instance=ExtResource("6_k4c6k")]
+position = Vector2(-309, 5)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy12" parent="." index="27" instance=ExtResource("6_k4c6k")]
+position = Vector2(227, 21)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy13" parent="." index="28" instance=ExtResource("6_k4c6k")]
+position = Vector2(-59, 53)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy14" parent="." index="29" instance=ExtResource("6_k4c6k")]
+position = Vector2(-31, -75)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy15" parent="." index="30" instance=ExtResource("6_k4c6k")]
+position = Vector2(51, 54)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy3" parent="." index="31" instance=ExtResource("6_k4c6k")]
+position = Vector2(266, -523)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy4" parent="." index="32" instance=ExtResource("6_k4c6k")]
+position = Vector2(-504, -650)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy5" parent="." index="33" instance=ExtResource("6_k4c6k")]
+position = Vector2(-388, -652)
+scale = Vector2(0.25, 0.25)
+
+[node name="WalkingEnemy6" parent="." index="34" instance=ExtResource("6_k4c6k")]
+position = Vector2(-258, -619)
+scale = Vector2(0.25, 0.25)

@@ -100,7 +100,19 @@ scale = Vector2(0.25, 0.249)
 position = Vector2(2235, -73)
 scale = Vector2(0.25, 0.249)
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="23"]
+[node name="WalkingEnemy22" parent="." index="23" instance=ExtResource("3_sqda2")]
+position = Vector2(1735, 279)
+scale = Vector2(0.25, 0.249)
+
+[node name="WalkingEnemy23" parent="." index="24" instance=ExtResource("3_sqda2")]
+position = Vector2(1475, 215)
+scale = Vector2(0.25, 0.249)
+
+[node name="WalkingEnemy24" parent="." index="25" instance=ExtResource("3_sqda2")]
+position = Vector2(968, 392)
+scale = Vector2(0.25, 0.249)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="26"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 motion_scale = Vector2(0.1, 1)
@@ -110,9 +122,9 @@ motion_mirroring = Vector2(100, 2.08165e-12)
 position = Vector2(100, 80)
 texture = ExtResource("10_lyht3")
 
-[node name="Portal" parent="." index="26"]
-position = Vector2(131, -65)
+[node name="Portal" parent="." index="29"]
+position = Vector2(31, -99)
 scale = Vector2(1.5, 1.5)
 next_level = ExtResource("11_jj5ob")
 
-[node name="lvl1bgm" parent="." index="27" instance=ExtResource("2_gpddt")]
+[node name="lvl1bgm" parent="." index="30" instance=ExtResource("2_gpddt")]
