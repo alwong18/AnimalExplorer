@@ -7,6 +7,7 @@ var start_level_msc = 0.0
 @onready var animation_player = $AnimationPlayer
 @onready var start_in = %StartIn
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = true
