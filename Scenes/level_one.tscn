@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d6u4p8bf0vfe"]
+[gd_scene load_steps=9 format=3 uid="uid://d6u4p8bf0vfe"]
 
 [ext_resource type="PackedScene" uid="uid://k5rl6ostil4q" path="res://Scenes/World.tscn" id="1_7hj86"]
 [ext_resource type="PackedScene" uid="uid://758ovr0ci41n" path="res://lvl_1_bgm.tscn" id="2_gpddt"]
 [ext_resource type="PackedScene" uid="uid://8oocy0wrsac1" path="res://Scenes/level_1_tile_map.tscn" id="2_x3bm2"]
 [ext_resource type="PackedScene" uid="uid://lcq5ylcf8lp5" path="res://Scenes/walking_enemy.tscn" id="3_sqda2"]
+[ext_resource type="PackedScene" uid="uid://cgtfxljvg2lt5" path="res://apple.tscn" id="7_5fpjy"]
+[ext_resource type="PackedScene" uid="uid://b5adjukue6psi" path="res://grape.tscn" id="8_aaxwj"]
 [ext_resource type="Texture2D" uid="uid://bgp6tnyb8ysek" path="res://green forest.png" id="10_lyht3"]
 [ext_resource type="PackedScene" uid="uid://bpdbef64mutk8" path="res://Scenes/level_two.tscn" id="11_jj5ob"]
 
@@ -123,8 +125,38 @@ position = Vector2(100, 80)
 texture = ExtResource("10_lyht3")
 
 [node name="Portal" parent="." index="29"]
-position = Vector2(31, -99)
+position = Vector2(1533, -149)
 scale = Vector2(1.5, 1.5)
 next_level = ExtResource("11_jj5ob")
 
 [node name="lvl1bgm" parent="." index="30" instance=ExtResource("2_gpddt")]
+
+[node name="Key1" parent="." index="31"]
+position = Vector2(-13, -51)
+
+[node name="Apple" parent="." index="32" instance=ExtResource("7_5fpjy")]
+position = Vector2(119, -47)
+
+[node name="Apple2" parent="." index="33" instance=ExtResource("7_5fpjy")]
+position = Vector2(355, -17)
+
+[node name="Apple3" parent="." index="34" instance=ExtResource("7_5fpjy")]
+position = Vector2(548, -64)
+
+[node name="Apple4" parent="." index="35" instance=ExtResource("7_5fpjy")]
+position = Vector2(864, -163)
+
+[node name="Apple5" parent="." index="36" instance=ExtResource("7_5fpjy")]
+position = Vector2(1430, -129)
+
+[node name="Grape" parent="." index="37" instance=ExtResource("8_aaxwj")]
+position = Vector2(1639, -7)
+
+[node name="Grape2" parent="." index="38" instance=ExtResource("8_aaxwj")]
+position = Vector2(1185, 89)
+
+[node name="Grape3" parent="." index="39" instance=ExtResource("8_aaxwj")]
+position = Vector2(649, -37)
+
+[node name="Grape4" parent="." index="40" instance=ExtResource("8_aaxwj")]
+position = Vector2(44, 140)

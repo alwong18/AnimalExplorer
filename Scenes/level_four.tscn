@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://br26g2x6fjapb"]
+[gd_scene load_steps=6 format=3 uid="uid://br26g2x6fjapb"]
 
 [ext_resource type="PackedScene" uid="uid://k5rl6ostil4q" path="res://Scenes/World.tscn" id="1_7j3ye"]
 [ext_resource type="PackedScene" uid="uid://ooi8ihg1m42k" path="res://Scenes/level_3_tile_map.tscn" id="2_2t15f"]
+[ext_resource type="Texture2D" uid="uid://cewsjoaqtyq0g" path="res://Scenes/purple throne room-export.png" id="3_awh41"]
 [ext_resource type="PackedScene" uid="uid://dr6qwxeqd684d" path="res://4.tscn" id="3_oh2um"]
+[ext_resource type="Texture2D" uid="uid://bbe7m8fthnqq2" path="res://crown.png" id="5_xgfrr"]
 
 [node name="LevelFour" instance=ExtResource("1_7j3ye")]
 
@@ -17,6 +19,8 @@ layer_0/tile_data = PackedInt32Array(524322, 393216, 23, 458786, 65536, 21, 3932
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("3_awh41")
 
 [node name="Portal" parent="." index="5"]
 position = Vector2(543, 59)
@@ -24,3 +28,7 @@ position = Vector2(543, 59)
 [node name="4" parent="." index="6" instance=ExtResource("3_oh2um")]
 volume_db = 10.0
 autoplay = true
+
+[node name="Crown" type="Sprite2D" parent="." index="8"]
+position = Vector2(547, -76)
+texture = ExtResource("5_xgfrr")

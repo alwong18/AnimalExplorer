@@ -6,7 +6,6 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_hvq4y"]
 
 [node name="Apple" type="Area2D"]
-scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_4v7nn")
