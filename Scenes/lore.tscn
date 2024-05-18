@@ -1,0 +1,134 @@
+[gd_scene load_steps=28 format=3 uid="uid://ci5qdgthse1qr"]
+
+[ext_resource type="Script" path="res://lore.gd" id="1_ju7sj"]
+[ext_resource type="Texture2D" uid="uid://bdrdtvxhwwdlr" path="res://lore/cutscene(6).png" id="2_w2jqm"]
+[ext_resource type="Texture2D" uid="uid://sfhyfonmxj0v" path="res://lore/cutscene(7).png" id="3_et408"]
+[ext_resource type="Texture2D" uid="uid://cs4rkkq5xjsmn" path="res://lore/cutscene(8).png" id="4_c6ka2"]
+[ext_resource type="Texture2D" uid="uid://wm0235g1lsmx" path="res://lore/cutscene(9).png" id="5_tc4g1"]
+[ext_resource type="Texture2D" uid="uid://cfjpv44ibjhwv" path="res://lore/cutscene(10).png" id="6_gef4m"]
+[ext_resource type="Texture2D" uid="uid://djd46j6dd8yvv" path="res://lore/cutscene(11).png" id="7_syqh1"]
+[ext_resource type="Texture2D" uid="uid://8v6ax3bn4yvq" path="res://lore/cutscene(12).png" id="8_og4qq"]
+[ext_resource type="Texture2D" uid="uid://cs7ftklrpyyco" path="res://lore/cutscene(1).png" id="9_m3752"]
+[ext_resource type="Texture2D" uid="uid://cup2ermbvddbt" path="res://lore/cutscene(2).png" id="10_3dwsw"]
+[ext_resource type="Texture2D" uid="uid://ccu0es18iys5o" path="res://lore/cutscene(3).png" id="11_m6fke"]
+[ext_resource type="Texture2D" uid="uid://dq4cpsgqb65cd" path="res://lore/cutscene(4).png" id="12_35mf6"]
+[ext_resource type="Texture2D" uid="uid://bmlie02kqhxhd" path="res://lore/cutscene(5).png" id="13_0cnmp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfj81"]
+atlas = ExtResource("2_w2jqm")
+region = Rect2(0, 0, 2598, 2598)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmtg6"]
+atlas = ExtResource("3_et408")
+region = Rect2(0, 0, 2598, 2598)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4xsi"]
+atlas = ExtResource("4_c6ka2")
+region = Rect2(0, 0, 2598, 2598)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15ah5"]
+atlas = ExtResource("5_tc4g1")
+region = Rect2(0, 0, 2598, 2598)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2byuq"]
+atlas = ExtResource("6_gef4m")
+region = Rect2(0, 0, 2598, 2598)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2d3b"]
+atlas = ExtResource("7_syqh1")
+region = Rect2(0, 0, 2598, 2598)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ci4og"]
+atlas = ExtResource("8_og4qq")
+region = Rect2(0, 0, 2598, 2598)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v3wfn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfj81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmtg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4xsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15ah5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2byuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2d3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ci4og")
+}],
+"loop": true,
+"name": &"Fox",
+"speed": 0.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ucwl"]
+atlas = ExtResource("9_m3752")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o32g"]
+atlas = ExtResource("10_3dwsw")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pki50"]
+atlas = ExtResource("11_m6fke")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppnl5"]
+atlas = ExtResource("12_35mf6")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umpcb"]
+atlas = ExtResource("13_0cnmp")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1q66l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ucwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6o32g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pki50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppnl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umpcb")
+}],
+"loop": true,
+"name": &"King",
+"speed": 5.0
+}]
+
+[node name="Lore" type="CanvasLayer"]
+script = ExtResource("1_ju7sj")
+
+[node name="Fox" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(159.5, 90.9633)
+scale = Vector2(0.125096, 0.0693123)
+sprite_frames = SubResource("SpriteFrames_v3wfn")
+animation = &"Fox"
+speed_scale = 0.5
+
+[node name="King" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(161.75, 91.5)
+scale = Vector2(0.256641, 0.149219)
+sprite_frames = SubResource("SpriteFrames_1q66l")
+animation = &"King"
+speed_scale = 0.05

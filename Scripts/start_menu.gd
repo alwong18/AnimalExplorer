@@ -1,6 +1,7 @@
 extends CenterContainer
 
 @onready var start_game_button = %StartGameButton
+@onready var lore = $VBoxContainer/Lore
 
 func _ready():
 #	RenderingServer.set_default_clear_color(Color.PINK)
