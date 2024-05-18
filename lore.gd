@@ -6,9 +6,8 @@ func _ready():
 	king.show()
 	king.play("King")
 	await king.animation_finished
-	king.stop()
 	king.hide()
-	LevelTransition.fade_to_black()
+	await get_tree().create_timer(1.0).timeout
 	fox.show()
 	fox.play("Fox")
 	await fox.animation_finished
