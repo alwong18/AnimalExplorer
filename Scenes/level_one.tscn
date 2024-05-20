@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://8oocy0wrsac1" path="res://Scenes/level_1_tile_map.tscn" id="2_x3bm2"]
 [ext_resource type="PackedScene" uid="uid://lcq5ylcf8lp5" path="res://Scenes/walking_enemy.tscn" id="3_sqda2"]
 [ext_resource type="PackedScene" uid="uid://cgtfxljvg2lt5" path="res://apple.tscn" id="7_5fpjy"]
-[ext_resource type="PackedScene" uid="uid://b5adjukue6psi" path="res://grape.tscn" id="8_aaxwj"]
+[ext_resource type="PackedScene" path="res://grape.tscn" id="8_aaxwj"]
 [ext_resource type="Texture2D" uid="uid://bgp6tnyb8ysek" path="res://green forest.png" id="10_lyht3"]
 [ext_resource type="PackedScene" uid="uid://bpdbef64mutk8" path="res://Scenes/level_two.tscn" id="11_jj5ob"]
 
