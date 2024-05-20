@@ -125,14 +125,15 @@ position = Vector2(100, 80)
 texture = ExtResource("10_lyht3")
 
 [node name="Portal" parent="." index="29"]
-position = Vector2(1533, -149)
+position = Vector2(2426, -51)
 scale = Vector2(1.5, 1.5)
 next_level = ExtResource("11_jj5ob")
 
 [node name="lvl1bgm" parent="." index="30" instance=ExtResource("2_gpddt")]
 
 [node name="Key1" parent="." index="31"]
-position = Vector2(-13, -51)
+position = Vector2(1666, 615)
+scale = Vector2(3, 3)
 
 [node name="Apple" parent="." index="32" instance=ExtResource("7_5fpjy")]
 position = Vector2(119, -47)
