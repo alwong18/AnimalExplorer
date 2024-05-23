@@ -35,14 +35,6 @@ speed_scale = 3.0
 position = Vector2(-10, -53)
 shape = SubResource("CircleShape2D_hpl36")
 
-[node name="LedgeCheckR" type="RayCast2D" parent="."]
-position = Vector2(8, -31)
-target_position = Vector2(0, 22)
-
-[node name="LedgeCheckL" type="RayCast2D" parent="."]
-position = Vector2(-24, -29)
-target_position = Vector2(0, 20)
-
 [node name="Hitbox" parent="." instance=ExtResource("3_6aoed")]
 collision_layer = 0
 collision_mask = 2

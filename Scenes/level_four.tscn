@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://br26g2x6fjapb"]
+[gd_scene load_steps=7 format=3 uid="uid://br26g2x6fjapb"]
 
 [ext_resource type="PackedScene" uid="uid://k5rl6ostil4q" path="res://Scenes/World.tscn" id="1_7j3ye"]
 [ext_resource type="PackedScene" uid="uid://ooi8ihg1m42k" path="res://Scenes/level_3_tile_map.tscn" id="2_2t15f"]
 [ext_resource type="Texture2D" uid="uid://cewsjoaqtyq0g" path="res://Scenes/purple throne room-export.png" id="3_awh41"]
-[ext_resource type="PackedScene" uid="uid://dr6qwxeqd684d" path="res://4.tscn" id="3_oh2um"]
+[ext_resource type="PackedScene" path="res://4.tscn" id="3_oh2um"]
 [ext_resource type="Texture2D" uid="uid://bbe7m8fthnqq2" path="res://crown.png" id="5_xgfrr"]
+[ext_resource type="PackedScene" uid="uid://da1rkqe6quf8i" path="res://boss.tscn" id="6_e2ys0"]
 
 [node name="LevelFour" instance=ExtResource("1_7j3ye")]
 
@@ -32,3 +33,7 @@ autoplay = true
 [node name="Crown" type="Sprite2D" parent="." index="8"]
 position = Vector2(547, -76)
 texture = ExtResource("5_xgfrr")
+
+[node name="Boss" parent="." index="9" instance=ExtResource("6_e2ys0")]
+position = Vector2(33, 47)
+scale = Vector2(0.17, 0.17)

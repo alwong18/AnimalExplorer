@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://jjmqf5wqxvqu" path="res://Scenes/level_three.tscn" id="4_oypf2"]
 [ext_resource type="PackedScene" uid="uid://b60epjdc2h37t" path="res://2.tscn" id="5_2yau3"]
 [ext_resource type="PackedScene" uid="uid://lcq5ylcf8lp5" path="res://Scenes/walking_enemy.tscn" id="6_k4c6k"]
-[ext_resource type="PackedScene" path="res://grape.tscn" id="7_qn6o0"]
+[ext_resource type="PackedScene" uid="uid://b5adjukue6psi" path="res://grape.tscn" id="7_qn6o0"]
 [ext_resource type="PackedScene" uid="uid://sxvpbxfepvh5" path="res://berries.tscn" id="8_rb81k"]
 
 [node name="LevelTwo" instance=ExtResource("1_6hlqk")]
